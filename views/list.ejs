@@ -1,0 +1,33 @@
+<%- include("header")-%>
+
+<div class="box" id="heading">
+  <h1> <%= listTitle %> </h1>
+</div>
+
+
+<div class="box">
+  <% for(var i=0;i<newListItems.length;i++){%>
+  <div class="item">
+    <input type="checkbox">
+    <p> <%=  newListItems[i]  %> </p>
+    <label>Priority</label>
+    <select >
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+      
+    </select>
+  </div>
+  <%  }%>
+
+  <form class="" action="/" method="post">
+
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+
+    <button type="submit" name="list" value=<%= listTitle %>>+</button>
+
+  </form>
+</div>
+
+
+<%- include("footer")-%>
